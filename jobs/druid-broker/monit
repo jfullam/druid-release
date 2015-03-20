@@ -1,0 +1,5 @@
+check process druid-broker 
+  with pidfile /var/vcap/sys/run/druid-broker/pid 
+  start program "/var/vcap/jobs/druid-broker/bin/druid_broker_ctl start"
+  stop program "/var/vcap/jobs/druid-broker/bin/druid_broker_ctl stop"
+  group vcap
